@@ -19,5 +19,3 @@ export const Button = ({
 		</button>
 	);
 };
-
-/*<Text resetColor={true} weight={800} uppercase>*/

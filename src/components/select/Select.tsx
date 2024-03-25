@@ -23,8 +23,7 @@ type SelectProps = {
 export const Select = (props: SelectProps) => {
 	const { options, placeholder, selected, onChange, onClose, title } = props;
 	const [isOpen, setIsOpen] = useState<boolean>(false);
-	//
-	const [status, setStatus] = useState<string>('closed');
+	//	const [status, setStatus] = useState<string>('closed');
 
 	const rootRef = useRef<HTMLDivElement>(null);
 	const placeholderRef = useRef<HTMLDivElement>(null);
@@ -47,8 +46,7 @@ export const Select = (props: SelectProps) => {
 	};
 	const handlePlaceHolderClick: MouseEventHandler<HTMLDivElement> = () => {
 		setIsOpen((isOpen) => !isOpen);
-		//
-		setStatus(isOpen ? 'closed' : 'open');
+		//	setStatus(isOpen ? 'closed' : 'open');
 	};
 
 	return (
@@ -74,9 +72,8 @@ export const Select = (props: SelectProps) => {
 				<div
 					className={clsx(
 						styles.placeholder,
-						styles[selected?.optionClassName || ''],
-						//
-						{ [styles.open]: isOpen }
+						styles[selected?.optionClassName || '']
+						//	{ [styles.open]: isOpen }
 					)}
 					data-status={status}
 					data-selected={!!selected?.value}
