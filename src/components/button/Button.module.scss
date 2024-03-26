@@ -15,5 +15,21 @@
 }
 
 .button:hover {
+	background: var(--light-gold, #ffedab);
+}
+
+.button:nth-child(1) {
+	background: #ffffff;
+}
+
+.button:nth-child(2) {
 	background: var(--gold, #ffc802);
+}
+
+.button:nth-child(1):hover {
+	background: #787878;
+}
+
+.button:nth-child(2):hover {
+	background: var(--gold, #ffedab);
 }
